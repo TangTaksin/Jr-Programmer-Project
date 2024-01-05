@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Demon : Enemy
 {
-    [SerializeField] private int damageToTake;
+    [SerializeField] private int damageAmount;
     private void Update()
     {
-        TakeDamage(damageToTake);
+        TakeDamage(damageAmount);
+        DealDamage(1);
+    }
+
+    public override void DealDamage(int amount)
+    {
+        Debug.Log(amount);
+
     }
 }

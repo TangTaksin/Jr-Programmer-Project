@@ -8,6 +8,12 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
+        Debug.Log("Take Damage:" + damageAmount);
         return;
+    }
+
+    public virtual void DealDamage(int damageToDeal)
+    {
+        Debug.Log("No virtual");
     }
 }
